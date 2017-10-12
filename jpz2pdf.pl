@@ -737,6 +737,8 @@ sub parse_jpz
 	$puzzle_data{'clues'}->{'Across'} = ();
 	foreach my $clue (@$ac) {
 		my $n = $clue->{'number'};
+		delete $clue->{'hint-url'};
+		delete $clue->{'format'};
 		delete $clue->{'number'};
 		delete $clue->{'word'};
 		for my $k (keys %$clue) {
@@ -756,6 +758,8 @@ sub parse_jpz
 	$puzzle_data{'clues'}->{'Down'} = ();
 	foreach my $clue (@$dn) {
 		my $n = $clue->{'number'};
+		delete $clue->{'hint-url'};
+		delete $clue->{'format'};
 		delete $clue->{'number'};
 		delete $clue->{'word'};
 		for my $k (keys %$clue) {
